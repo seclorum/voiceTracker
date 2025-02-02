@@ -6,6 +6,9 @@ voice_tracker:	voice_tracker.c
 test:	voice_tracker
 	./voice_tracker | sort
 
+lua.test:	voice_tracker.lua
+	luajit voice_tracker.lua | sort
+
 clean:
 	rm -rf voice_tracker *.?~
 
